@@ -11,4 +11,4 @@ const registrationFormSchema = new mongoose.Schema({
   createdAt: { type: Date, default: Date.now }, // Add a timestamp for tracking
 });
 
-export default mongoose.models.registrationFormSchema || mongoose.model('Participant', registrationFormSchema);
+export default mongoose.models.registrationFormSchema || mongoose.model('Students', registrationFormSchema);
