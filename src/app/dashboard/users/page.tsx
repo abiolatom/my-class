@@ -1,1 +1,12 @@
-import { form} from '@src/app/ui/users/new-user';
+
+
+
+export default function Form (){
+
+
+    return (
+        <form>
+            
+        </form>
+    )
+}
