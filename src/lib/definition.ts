@@ -1,4 +1,4 @@
-export interface ContactFormProps {
+export interface RegistrationFormProps {
   onSubmit: (formData: FormData) => void;
 }
 

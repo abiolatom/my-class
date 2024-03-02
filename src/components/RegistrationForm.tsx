@@ -1,10 +1,10 @@
 "use client";
-import { ContactFormProps } from "@/lib/definition";
+import { RegistrationFormProps } from "@/lib/definition";
 import { FormData } from "@/lib/definition";
 import React, { useState } from "react";
 import { skillLevels } from "@/lib/definition";
 
-const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
+const RegistrationForm: React.FC<RegistrationFormProps> = ({ onSubmit }) => {
   const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
@@ -134,8 +134,8 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
             <textarea
               id="additionalInfo"
               name="additionalInfo"
-                          value={formData.additionalInfo}
-                          placeholder="Have some additional information for us?"
+              value={formData.additionalInfo}
+              placeholder="Have some additional information for us?"
               onChange={handleChange}
               required
               className="rounded-md border border-gray-300 px-3 py-2 focus:outline-none focus:border-sky-500 resize-none"
@@ -153,4 +153,4 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
   );
 };
 
-export default ContactForm;
+export default RegistrationForm;
