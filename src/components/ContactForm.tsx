@@ -2,7 +2,7 @@
 import { ContactFormProps } from "@/lib/definition";
 import { FormData } from "@/lib/definition";
 import React, { useState } from "react";
-
+import { skillLevels } from "@/lib/definition";
 
 const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
   const [formData, setFormData] = useState<FormData>({
@@ -10,7 +10,8 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
     email: "",
     phoneNumber: "",
     country: "",
-    city: "",
+      city: "",
+    skillLevel: "",
     additionalInfo: "",
   });
 
@@ -89,6 +90,33 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
         {" "}
         <div>
           <h1> Finnish Skills</h1>
+              </div>
+              
+              <div>
+              <label htmlFor="skillLevel">Additional Information:</label>
+              <select
+              id="customer"
+              name="customerId"
+              className="peer block w-full cursor-pointer rounded-md border border-gray-200 py-2 pl-10 text-sm outline-2 placeholder:text-gray-500"
+              defaultValue=""
+            >
+              <option value="" disabled>
+                Define your Finnish Skill Level
+              </option>
+              {skillLevels.map((level) => (
+                <option key={level} value={formData.skillLevel}>
+                  {level}
+                </option>
+              ))}
+            </select> <input
+            type="text"
+            id="country"
+            name="country"
+            placeholder="Enter current country of residence"
+            value={formData.country}
+            onChange={handleChange}
+            required
+          />
         </div>
         <div>
           <label htmlFor="additionalInfo">Additional Information:</label>
