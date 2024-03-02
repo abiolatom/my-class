@@ -118,7 +118,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
               defaultValue=""
             >
               <option value="" disabled>
-                Define your Finnish Skill Level
+                How do you classify your Finnish Skill Level?
               </option>
               {skillLevels.map((level) => (
                 <option key={level} value={level}>
@@ -134,7 +134,8 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
             <textarea
               id="additionalInfo"
               name="additionalInfo"
-              value={formData.additionalInfo}
+                          value={formData.additionalInfo}
+                          placeholder="Have some additional information for us?"
               onChange={handleChange}
               required
               className="rounded-md border border-gray-300 px-3 py-2 focus:outline-none focus:border-sky-500 resize-none"
